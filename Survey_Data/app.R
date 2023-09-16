@@ -31,7 +31,7 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      selectInput("Plot", "Select the Plot type", choices = c("Scatter", "Histogram", "Boxplot", "Stacked Bar"))
+      selectInput("Plot", "Select the Plot type", choices = c("Scatter", "Histogram", "Boxplot1", "Stacked Bar","Facet Boxplot","Line Chart","Boxplot3"))
     ),
     
     mainPanel(
@@ -67,7 +67,7 @@ server <- function(input, output) {
       ggplot(surveys, aes(x = weight, color = species_id)) +
         geom_histogram(binwidth = 1)
     }
-    else if (input$Plot == "Boxplot") {
+    else if (input$Plot == "Boxplot1") {
       ggplot(surveys, aes(x = weight, y = species_id)) +
         geom_boxplot(aes(color = species_id))
     }
@@ -75,6 +75,28 @@ server <- function(input, output) {
       ggplot(surveys, aes(x = species_id, fill = sex)) +
         geom_bar(position = "stack")
     }
+    else if (input$Plot == "Facet Boxplot"){
+    ggplot(surveys,aes(x=species_id, y =weight))+
+      geom_boxplot(aes(color = species_id))+
+      labs(title = "Distribution of weight w.r.t Species", x="Species",y="Weights")+
+      facet_wrap(~species_id)+
+      theme_bw()
+    }
+    else if (input$Plot == "Boxplot3"){
+      ggplot(surveys,aes(x=hindfoot_length, y =species_id))+
+        geom_boxplot(aes(color = species_id))+
+        labs(title = "Distribution of weight w.r.t Species", x="Hindfoot_length",y="Weights")+
+        theme_classic()
+    }
+    else if (input$Plot == "Line Chart"){
+      yearly_count<-aggregate(record_id ~ year , data= surveys, FUN=function(x)(length(x)))
+      ggplot(yearly_count,aes(x=year,y=record_id))+
+        geom_line()+
+        labs(title = "Trend analysis year wise", x="Year",y="Record_id")+
+        theme_bw()
+    }
+    
+    
   })
 }
 
