@@ -54,10 +54,18 @@ ggplot_shiny()
 
 ## Demo
 The Shiny app's appearance is demonstrated in the following video:
-https://github.com/YatinKande/Surverys_Shiney/assets/135036330/6cde95a6-3d0e-4500-9a86-069a99c747c0
+
+
+https://github.com/YatinKande/Surverys_Shiney/assets/135036330/787a6833-0c36-4f3a-a6df-3c7e2c48dca1
+
+
 
 The Shiny Gui is shown in the following:
-https://github.com/YatinKande/Surverys_Shiney/assets/135036330/69012439-546a-4819-912f-fe8f0b30f783
+
+
+
+https://github.com/YatinKande/Surverys_Shiney/assets/135036330/50704b43-29de-424d-8cce-5e3e6848eb18
+
 
 
 ## 🚀 About Me
