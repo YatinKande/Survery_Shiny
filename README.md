@@ -56,7 +56,11 @@ ggplot_shiny()
 The Shiny app's appearance is demonstrated in the following video:
 
 
-https://github.com/YatinKande/Surverys_Shiney/assets/135036330/787a6833-0c36-4f3a-a6df-3c7e2c48dca1
+
+
+
+https://github.com/YatinKande/Survery_Shiny/assets/135036330/a455d610-e225-4c62-93d5-fffac8cba953
+
 
 
 
@@ -64,7 +68,11 @@ The Shiny Gui is shown in the following:
 
 
 
-https://github.com/YatinKande/Surverys_Shiney/assets/135036330/50704b43-29de-424d-8cce-5e3e6848eb18
+
+
+
+https://github.com/YatinKande/Survery_Shiny/assets/135036330/0c11e416-f3ac-4a85-b3ce-98616ba6a4b3
+
 
 
 
